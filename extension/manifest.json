@@ -2,6 +2,7 @@
   "manifest_version": 3,
   "name": "Ask ChatGPT",
   "version": "1.0.0",
+  "description": "Firefox version of chrome gpt",
   "permissions": ["contextMenus"],
   "icons": {
     "16": "icon.png",
@@ -9,7 +10,7 @@
     "128": "icon.png"
   },
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"]
   },
   "content_scripts": [
     {

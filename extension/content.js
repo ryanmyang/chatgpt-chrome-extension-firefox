@@ -1,5 +1,8 @@
+//Notes: Changed manifest background's service_woerker to scripts
+
+
 // Listen for messages from the background script
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === "ASK_CHATGPT") {
     let originalActiveElement;
     let text;
