@@ -7,6 +7,7 @@ browser.contextMenus.create({
   contexts: ["all"],
 });
 
+
 // Listen for when the user clicks on the context menu item
 browser.contextMenus.onClicked.addListener((info, tab) => {
   console.log("contextMenu oncliked");
