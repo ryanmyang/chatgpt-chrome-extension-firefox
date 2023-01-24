@@ -1,5 +1,5 @@
 // Create a context menu item
-chrome.contextMenus.create({
+browser.contextMenus.create({
   id: "ask-chatgpt",
   title: "Ask ChatGPT",
   contexts: ["all"],
