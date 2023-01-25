@@ -1,9 +1,9 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Ask ChatGPT",
   "version": "1.0.0",
   "description": "Firefox version of chrome gpt",
-  "permissions": ["contextMenus"],
+  "permissions": ["contextMenus", "activeTab"],
   "icons": {
     "16": "icon.png",
     "48": "icon.png",

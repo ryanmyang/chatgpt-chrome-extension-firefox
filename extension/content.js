@@ -1,8 +1,10 @@
 //Notes: Changed manifest background's service_woerker to scripts
-
+console.log("content.js loaded");
 
 // Listen for messages from the background script
+console.log("Listener activates next line");
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  console.log("listener added");
   if (message.type === "ASK_CHATGPT") {
     let originalActiveElement;
     let text;

@@ -12,9 +12,10 @@ const app = express().use(cors()).use(bodyParser.json());
 const gptApi = new ChatGPTAPIBrowser({
   email: process.env.OPENAI_EMAIL,
   password: process.env.OPENAI_PASSWORD,
+  isGoogleLogin: true
 });
 
-await gptApi.initSession();
+await gptApi.initSession(); //chrome opens
 
 const Config = configure(config);
 
