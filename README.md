@@ -15,10 +15,12 @@ npm install
 ```
 
 Copy `.env-example` into a new file named `.env` and add your ChatGPT email and password.
+Note: If you are using google login, make sure to go into server.js and change `isGoogleLogin` to `true`
 
 ###### Run the server
 
 First navigate to the directory of this repo on your machine
+
 
 Then run the server so the extension can communicate with ChatGPT.
 ```bash
