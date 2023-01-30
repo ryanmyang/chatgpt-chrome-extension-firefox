@@ -1,11 +1,11 @@
 //Notes: Changed manifest background's service_woerker to scripts
 console.log("content.js loaded");
 
+
 // Listen for messages from the background script
-console.log("Listener activates next line");
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  console.log("listener added");
   if (message.type === "ASK_CHATGPT") {
+    
     let originalActiveElement;
     let text;
 
@@ -28,8 +28,9 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
     }
 
     if (!text) {
+      console.log("Active element: " + Boolean(document.activeElement));
       alert(
-        "No text found. Select this option after right clicking on a textarea that contains text or on a selected portion of text."
+        "Noo text found. Select this option after right clicking on a textarea that contains text or on a selected portion of text."
       );
       return;
     }
@@ -88,6 +89,7 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
           alert(`ChatGPT says: ${data.reply}`);
         }
 
+        console.log("running restore");
         restoreCursor();
       })
       .catch((error) => {
@@ -102,11 +104,13 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 const showLoadingCursor = () => {
   const style = document.createElement("style");
-  style.id = "cursor_wait";
+  style.id = "cursor_waittingg";
   style.innerHTML = `* {cursor: wait;}`;
   document.head.insertBefore(style, null);
 };
 
 const restoreCursor = () => {
-  document.getElementById("cursor_wait").remove();
+  console.log("removing cursor");
+  let killCursor = document.getElementById("cursor_waittingg");
+  killCursor.parentNode.removeChild(killCursor);
 };
