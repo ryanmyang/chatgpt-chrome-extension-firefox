@@ -4,6 +4,11 @@
   "version": "1.0.0",
   "description": "Firefox version of chrome gpt",
   "permissions": ["contextMenus", "activeTab","<all_urls>"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "chatgptfirefox@ry.com"
+    }
+  },
   "icons": {
     "16": "icon.png",
     "48": "icon.png",
