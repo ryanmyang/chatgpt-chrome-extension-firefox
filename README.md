@@ -5,8 +5,7 @@ A Chrome extension that adds [ChatGPT](https://chat.openai.com) to every text bo
 ![](https://i.imgur.com/CPMOyG7.gif)
 
 ## Install
-
-First clone this repo on your local machine
+First clone/download this repo on your local machine
 
 Then navigate to the folder, install dependencies
 
@@ -17,7 +16,7 @@ npm install
 Copy `.env-example` into a new file named `.env` and add your ChatGPT email and password.
 Note: If you are using google login, make sure to go into server.js and change `isGoogleLogin` to `true`
 
-###### Run the server
+#### Run the server
 
 First navigate to the directory of this repo on your machine
 
@@ -29,12 +28,18 @@ node server.js
 
 This will automate interaction with ChatGPT through a headless Chrome browser, thanks to the [chatgpt-api](https://github.com/transitive-bullshit/chatgpt-api) library. You will see the browser pop up after running your server. It should automatically log you in, but you may need to manually solve a captcha to complete the process.
 
-###### Add the extension
+#### Add the extension NOTE: Currently due to firefox permissions and security, you have two options:
+1. Use normal firefox and drag in the xpi file every time you launch firefox new again
+2. Use Firefox Developer to install permanently
+
+###### Installation option 1:
 
 1. Go to about:addons in your Firefox browser
 4. Drag in your xpi file in `chatgpt-firefox-extension/extension/chatgpt-extension-firefox.xpi` 
 
 You'll now see "Ask ChatGPT" if you right click in any text input or content editable area.
+
+##### Installation option 2 instructions (coming soon)
 
 ## Troubleshooting
 
