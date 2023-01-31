@@ -45,6 +45,7 @@ You'll now see "Ask ChatGPT" if you right click in any text input or content edi
 
 If ChatGPT is taking a very long time to respond or not responding at all then it could mean that their servers are currently overloaded. You can confirm this by going to [chat.openai.com/chat](https://chat.openai.com/chat) and seeing whether their website works directly.
 
+Mac: If you get an error about port 3000 when you try running server.js, try killing whatever is on port 3000. Check it with `sudo lsof -i :3000` and kill it with `kill -3 <insert whatever the PID value is here>`
 
 ## Related
 
