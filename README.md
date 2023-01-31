@@ -20,7 +20,6 @@ Note: If you are using google login, make sure to go into server.js and add `isG
 
 First navigate to the directory of this repo on your machine
 
-
 Then run the server so the extension can communicate with ChatGPT.
 ```bash
 node server.js
@@ -35,11 +34,15 @@ This will automate interaction with ChatGPT through a headless Chrome browser, t
 ###### Installation option 1:
 
 1. Go to about:addons in your Firefox browser
-4. Drag in your xpi file in `chatgpt-firefox-extension/extension/chatgpt-extension-firefox.xpi` 
+4. Drag in your xpi file at `chatgpt-firefox-extension/extension/chatgpt-extension-firefox.xpi` 
 
 You'll now see "Ask ChatGPT" if you right click in any text input or content editable area.
 
-##### Installation option 2 instructions (coming soon)
+##### Installation option 2:
+
+1. Download [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
+2. Go to `about:config` and set `xpinstall.signatures.required` to `false`
+3. Go to `about:addons` and drag in the xpi file you downloaded at `chatgpt-firefox-extension/extension/chatgpt-extension-firefox.xpi` 
 
 ## Troubleshooting
 
