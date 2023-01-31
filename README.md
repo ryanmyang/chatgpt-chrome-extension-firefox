@@ -14,7 +14,7 @@ npm install
 ```
 
 Copy `.env-example` into a new file named `.env` and add your ChatGPT email and password.
-Note: If you are using google login, make sure to go into server.js and change `isGoogleLogin` to `true`
+Note: If you are using google login, make sure to go into server.js and add `isGoogleLogin: true` as a third line inside of the gptApi function (Don't forget the comma)
 
 #### Run the server
 
