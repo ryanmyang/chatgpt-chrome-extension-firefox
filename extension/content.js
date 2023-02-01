@@ -1,10 +1,11 @@
 //Notes: Changed manifest background's service_woerker to scripts
 console.log("content.js loaded");
-
-
+//import ChatGPT from "chatgpt-official";
+//import breaks
 // Listen for messages from the background script
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === "ASK_CHATGPT") {
+    console.log("Message received");
     
     let originalActiveElement;
     let text;
@@ -35,10 +36,10 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
       return;
     }
 
-    showLoadingCursor();
+    //showLoadingCursor();
 
     // Send the text to the API endpoint
-    fetch("http://localhost:3000", {
+    /*fetch("http://localhost:3000", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -98,19 +99,18 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
           "Error. Make sure you're running the server by following the instructions on https://github.com/gragland/chatgpt-chrome-extension. Also make sure you don't have an adblocker preventing requests to localhost:3000."
         );
         throw new Error(error);
-      });
+      });*/
   }
 });
 
 const showLoadingCursor = () => {
   const style = document.createElement("style");
-  style.id = "cursor_waittingg";
+  style.id = "cursor_wait";
   style.innerHTML = `* {cursor: wait;}`;
   document.head.insertBefore(style, null);
 };
 
 const restoreCursor = () => {
-  console.log("removing cursor");
-  let killCursor = document.getElementById("cursor_waittingg");
+  let killCursor = document.getElementById("cursor_wait");
   killCursor.parentNode.removeChild(killCursor);
 };
